@@ -1,0 +1,14 @@
+# Minimal requirements for reproduction (adjust versions if needed)
+numpy>=1.23
+scipy>=1.10
+scikit-learn>=1.3
+pandas>=2.0
+matplotlib>=3.7
+# PyTorch: choose the right CUDA/CPU build for your system
+torch>=2.1
+torchaudio>=2.1
+torchvision>=0.16
+# For YAML parsing
+pyyaml>=6.0
+# For reproducible hashing/logging (optional)
+tqdm>=4.66

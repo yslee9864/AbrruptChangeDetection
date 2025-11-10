@@ -1,0 +1,17 @@
+{
+  "generated_at": "2025-11-09 11:19:21",
+  "root": "/mnt/data/repro_export",
+  "files": [
+    "/mnt/data/repro_export/README_review.md",
+    "/mnt/data/repro_export/config/config.yaml",
+    "/mnt/data/repro_export/config/seeds.txt",
+    "/mnt/data/repro_export/config/splits.json",
+    "/mnt/data/repro_export/docs/preprocess.md",
+    "/mnt/data/repro_export/requirements.txt",
+    "/mnt/data/repro_export/scripts/download_ptbxl.py",
+    "/mnt/data/repro_export/scripts/eval_snn.py",
+    "/mnt/data/repro_export/scripts/preprocess.py",
+    "/mnt/data/repro_export/scripts/tiny_ann_baselines.py",
+    "/mnt/data/repro_export/scripts/train_snn.py"
+  ]
+}

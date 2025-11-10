@@ -1,0 +1,27 @@
+{
+  "seed_base": 2025,
+  "policy": "deterministic_hash_mod_split",
+  "by": "patient_id",
+  "hash": "sha256",
+  "ratios": {
+    "train": 70,
+    "val": 10,
+    "test": 20
+  },
+  "mapping": {
+    "train": [
+      0,
+      69
+    ],
+    "val": [
+      70,
+      79
+    ],
+    "test": [
+      80,
+      99
+    ]
+  },
+  "modulus": 100,
+  "note": "Given a patient_id integer, compute sha256(str(patient_id)) % 100 -> assign to train/val/test by the ranges above. This yields a stable subject-wise split without shipping real ID lists. Use scripts/make_splits.py to materialize explicit lists from PTB(-XL) metadata.csv."
+}

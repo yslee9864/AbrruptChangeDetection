@@ -1,0 +1,33 @@
+created: REVIEW-PACKAGE-v2
+model:
+  conv_out: 8
+  kernel: 3
+  stride: 1
+  padding: same
+  hidden: 64
+  spiking_cell: "LIF/AdEx (shared stack)"
+training:
+  optimizer: adam
+  lr: 0.003
+  batch_size: 32
+  max_epochs: 50
+  early_stopping:
+    monitor: val_auroc
+    patience: 5
+    min_delta: 0.0
+loss:
+  type: weighted_ce
+  pos_weight: auto
+reporting:
+  metrics: [accuracy, precision, recall, f1, auroc, auprc]
+  seeds: [0, 1, 2, 3, 4]
+thresholding:
+  tau_sweep: [0.1, 0.9]
+  step: 0.01
+  mu_k_sigma:
+    k_grid: [1.5, 2.0, 2.5]
+    k_fixed: null
+hardware:
+  device: cuda
+  env: "Python 3.10 + PyTorch 2.x + CUDA 12.x"
+note: "v2: all placeholders removed; splits are defined by a deterministic subject-wise policy."
